@@ -1,16 +1,24 @@
 <template>
   <div class="item">
     <img id="icon" src="../../../assets/logo.png" alt="">
-    <p id="title">七夕泥</p>
+    <p id="title">{{name}}</p>
   </div>
 </template>
 <script lang="ts">
+
 export default {
+  props: {
+    name: {
+      require: true,
+      type: String
+    }
+  },
   setup () {
     return {};
   }
 };
 </script>
+
 <style lang="scss" scoped>
 .item {
   width: 100%;
@@ -27,6 +35,9 @@ export default {
   padding-left: 10px;
 }
 #title {
-  margin-left: 5px;
+  margin-left: 4px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
 }
 </style>

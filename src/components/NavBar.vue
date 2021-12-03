@@ -36,7 +36,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-$nav-bar-height: 32px;
+@import '../main.scss';
+
 #nav-bar  {
   width: 100%;
   height: $nav-bar-height;
